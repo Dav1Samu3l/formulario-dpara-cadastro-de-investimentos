@@ -3,4 +3,4 @@ Este é um formulário simples para cadastro de investimentos
   
   
   
-  Como usar Basta preencher os campos com as informações da negociação desejada e clicar em "Cadastrar".  Tecnologias utilizadas HTML CSS JavaScript (ES6)
+  Como usar: Basta preencher os campos com as informações da negociação desejada e clicar em "Cadastrar".  Tecnologias utilizadas HTML CSS JavaScript (ES6)
