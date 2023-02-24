@@ -12,6 +12,7 @@ export class NegociacaoController {
         let valor = parseFloat(this.campoValor.value);
         let novaNegociacao = new Negociacao(data, quantidade, valor);
         console.log(novaNegociacao);
+        this.ListaNegociacoes()
         return novaNegociacao;
     }
 }
