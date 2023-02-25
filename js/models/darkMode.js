@@ -2,8 +2,8 @@
   function togle() {
     
     const toggleThemeBtn = document.querySelector('.toggle-theme');
-    toggleThemeBtn.addEventListener('click', () => {
-      event.preventDefault();
+    toggleThemeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       document.body.classList.toggle('dark');
     });
 }
