@@ -31,14 +31,23 @@ export class NegociacaoController {
         // Cria uma nova linha na tabela
         const novaLinha = document.createElement('tr');
 
-    
-        // Define o conteúdo das células
-        celulaData.innerHTML = novaNegociacao.date.toLocaleDateString();
-        celulaQuantidade.innerHTML = novaNegociacao.quantidade;
-        celulaValor.innerHTML = novaNegociacao.valor;
+        // Cria uma nova celula na tabela e insri o valor da data
+        const novaColuna = document.createElement('td');
+        novaColuna.innerHTML = novaNegociacao.date.toLocaleDateString();
+         // Cria uma nova coluna na tabela e inseri a quantidade
+        const celNovaNegociacao = document.createElement('td');
+        celNovaNegociacao.innerHTML = novaNegociacao.quantidade;
+         // Cria uma nova coluna na tabela e inserio valor 
+        const celulaVal = document.createElement('td');
+        celulaVal.innerHTML = novaNegociacao.valor;
+
+        // Adiciona as células à nova linha
+        novaLinha.appendChild(novaColuna);
+        novaLinha.appendChild(celNovaNegociacao);
+        novaLinha.appendChild(celulaVal);
 
         // Adiciona a nova linha à tabela
-        this.tabela.appendChild(novaLinha);
+        this.tabela.querySelector('tbody').appendChild(novaLinha);
 
 
     }

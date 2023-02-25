@@ -12,7 +12,7 @@ export class ListaNegociacoes {
 
     adiciona(negociacao) {
           this.negociacoes.push(negociacao);
-          this._tbody.appendChild(this._criaNovaLinha(negociacao));
+          this._tbody.appendChild(this.negociacoes(negociacao));
 
         }
 }
