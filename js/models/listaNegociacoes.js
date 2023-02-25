@@ -1,5 +1,5 @@
-import { Negociacao } from "./Negociacao.js";
-
+import { Negociacao } from "../models/negociacao.js";
+import { NegociacaoController } from "../controller/controller.js";
 export class ListaNegociacoes {
     negociacoes;
 
@@ -9,5 +9,5 @@ export class ListaNegociacoes {
 
     adiciona(negociacao) {
           this.negociacoes.push(negociacao);
-    }
+        }
 }
