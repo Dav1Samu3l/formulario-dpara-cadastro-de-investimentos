@@ -6,8 +6,9 @@ export class NegociacaoController {
         this.campoData = document.querySelector('#dataNegociacao');
         this.quantidadeAcoes = document.querySelector('#quantidadeAcoes');
         this.campoValor = document.querySelector('#valorNegociacao');
+        this.tabela = document.getElementById('tabela-negociacoes');
 
-       
+
 
     }
     criarNegociacao() {
@@ -15,18 +16,33 @@ export class NegociacaoController {
         let quantidade = parseInt(this.quantidadeAcoes.value);
         let valor = parseFloat(this.campoValor.value);
         var novaNegociacao = new Negociacao(data, quantidade, valor);
-    
+
         // Seleciona as células da tabela
         const celulaData = document.querySelector('#data');
         const celulaQuantidade = document.querySelector('#quantidade');
         const celulaValor = document.querySelector('#valor');
-    
+
         // Atualiza o conteúdo das células com os valores dos inputs
+        celulaData.innerHTML = (novaNegociacao.date.toLocaleDateString());
+        celulaQuantidade.innerHTML = novaNegociacao.quantidade;
+        celulaValor.innerHTML = novaNegociacao.valor;
+
+
+        // Cria uma nova linha na tabela
+        const novaLinha = document.createElement('tr');
+
+    
+        // Define o conteúdo das células
         celulaData.innerHTML = novaNegociacao.date.toLocaleDateString();
         celulaQuantidade.innerHTML = novaNegociacao.quantidade;
         celulaValor.innerHTML = novaNegociacao.valor;
+
+        // Adiciona a nova linha à tabela
+        this.tabela.appendChild(novaLinha);
+
+
     }
-    
+
 
 
 }
