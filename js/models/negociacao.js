@@ -1,4 +1,4 @@
-import { NegociacaoController } from "../controller/controller.js";
+import {  } from "../controller/controller.js";
 
 
 export  class Negociacao {
