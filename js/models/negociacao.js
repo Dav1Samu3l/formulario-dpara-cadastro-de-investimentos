@@ -2,23 +2,23 @@ import {  } from "../controller/controller.js";
 
 
 export  class Negociacao {
-    date
-    quantidade
-    valor
+    #date
+    #quantidade
+    #valor
 
     constructor(date, quantidade, valor) {
-        this.date = date
-        this.quantidade = quantidade
-        this.valor = valor
+        this._date = date
+        this._quantidade = quantidade
+        this._valor = valor
     }
     get date() {
-        return this.date
+        return this._date
     }
     get quantidade() {
-        return this.quantidade
+        return this._quantidade
     }
     get valor() {
-        return this.valor
+        return this._valor
     }
 
 }

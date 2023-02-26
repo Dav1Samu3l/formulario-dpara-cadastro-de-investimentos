@@ -1,17 +1,20 @@
 import { Negociacao } from "../models/negociacao.js";
 
 export class NegociacaoController {
+    #campoData
+    #quantidadeAcoes
+
     constructor(campoData, quantidadeAcoes, campoValor) {
-        this.campoData = document.querySelector('#dataNegociacao');
-        this.quantidadeAcoes = document.querySelector('#quantidadeAcoes');
+        this._campoData = document.querySelector('#dataNegociacao');
+        this._quantidadeAcoes = document.querySelector('#quantidadeAcoes');
         this.campoValor = document.querySelector('#valorNegociacao');
         this.tabela = document.getElementById('tabela-negociacoes');
     }
 
     criarNegociacao() {
         
-        let data = new Date(this.campoData.value + "T00:00:00-03:00");
-        let quantidade = parseInt(this.quantidadeAcoes.value);
+        let data = new Date(this._campoData.value + "T00:00:00-03:00");
+        let quantidade = parseInt(this._quantidadeAcoes.value);
         let valor = parseFloat(this.campoValor.value);
         var novaNegociacao = new Negociacao(data, quantidade, valor);
         console.log(novaNegociacao);
