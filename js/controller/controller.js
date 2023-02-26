@@ -1,5 +1,4 @@
 import { Negociacao } from "../models/negociacao.js";
-import { ListaNegociacoes } from "../models/listaNegociacoes.js";
 
 export class NegociacaoController {
     constructor(campoData, quantidadeAcoes, campoValor) {
@@ -7,15 +6,19 @@ export class NegociacaoController {
         this.quantidadeAcoes = document.querySelector('#quantidadeAcoes');
         this.campoValor = document.querySelector('#valorNegociacao');
         this.tabela = document.getElementById('tabela-negociacoes');
-
-
-
     }
+
+
+
+    
     criarNegociacao() {
-        let data = new Date(this.campoData.value);
+        
+        let data = new Date(this.campoData.value + "T00:00:00-03:00");
         let quantidade = parseInt(this.quantidadeAcoes.value);
         let valor = parseFloat(this.campoValor.value);
         var novaNegociacao = new Negociacao(data, quantidade, valor);
+        console.log(novaNegociacao);
+
 
         // Seleciona as células da tabela
         const celulaData = document.querySelector('#data');
@@ -27,17 +30,18 @@ export class NegociacaoController {
         celulaQuantidade.innerHTML = novaNegociacao.quantidade;
         celulaValor.innerHTML = novaNegociacao.valor;
 
-
         // Cria uma nova linha na tabela
         const novaLinha = document.createElement('tr');
 
         // Cria uma nova celula na tabela e insri o valor da data
         const novaColuna = document.createElement('td');
         novaColuna.innerHTML = novaNegociacao.date.toLocaleDateString();
-         // Cria uma nova coluna na tabela e inseri a quantidade
+        
+        // Cria uma nova celula na tabela e inseri a quantidade
         const celNovaNegociacao = document.createElement('td');
         celNovaNegociacao.innerHTML = novaNegociacao.quantidade;
-         // Cria uma nova coluna na tabela e inserio valor 
+        
+        // Cria uma nova celula na tabela e inserio valor 
         const celulaVal = document.createElement('td');
         celulaVal.innerHTML = novaNegociacao.valor;
 
@@ -48,15 +52,8 @@ export class NegociacaoController {
 
         // Adiciona a nova linha à tabela
         this.tabela.querySelector('tbody').appendChild(novaLinha);
-
-
     }
-
-
-
 }
-
-
 function enviar() {
     const controller = new NegociacaoController();
     document.querySelector('#cadastrar')
