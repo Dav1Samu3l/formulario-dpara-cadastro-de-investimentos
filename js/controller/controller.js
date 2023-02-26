@@ -8,9 +8,6 @@ export class NegociacaoController {
         this.tabela = document.getElementById('tabela-negociacoes');
     }
 
-
-
-    
     criarNegociacao() {
         
         let data = new Date(this.campoData.value + "T00:00:00-03:00");
