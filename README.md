@@ -1,7 +1,3 @@
-Este é um formulário simples para cadastro de investimentos
-  onde o usuário pode informar a data da negociação, a quantidade de ações vendidas e o valor da negociação.  O formulário possui validações simples para garantir que os valores informados estejam dentro de uma faixa aceitável.  Além disso, o botão "Alternar tema" permite ao usuário alternar entre o tema claro e escuro do formulário.
-  
-  
-  
-  Como usar: Basta preencher os campos com as informações da negociação desejada e clicar em "Cadastrar".  Tecnologias utilizadas HTML CSS JavaScript (ES6)
+O código fornecido é composto de várias seções, incluindo um controlador de negociação, uma classe de negociação, uma classe de lista de negociação e algumas funções auxiliares. O controlador de negociação é responsável por criar novas negociações e adicioná-las a uma tabela HTML. A classe de negociação armazena informações sobre uma negociação individual, como a data, quantidade e valor, enquanto a classe de lista de negociação é responsável por armazenar um array de negociações e exibi-las em uma tabela HTML. A função "enviar" é responsável por chamar o método "criarNegociacao" do controlador de negociação quando o botão "cadastrar" é clicado. A função "toggle" adiciona um evento ao botão "Alternar tema" para alternar o tema escuro. Há também um HTML básico que contém um formulário e uma tabela para exibir as negociações.
+
 ![image](https://user-images.githubusercontent.com/106498376/221391854-559b3cc8-e6ba-4d40-a97a-232dbb14c388.png)
